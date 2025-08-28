@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1 - Modern Login System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-shape bg-shape1"></div>
+    <div class="bg-shape bg-shape2"></div>
+    <div class="bg-shape bg-shape3"></div>
+    <div class="custom-cursor"></div>
+    <div id="container">
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="form">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-name" placeholder="Full Name" required>
+            <input type="text" id="signup-number" placeholder="Phone Number" required>
+            <input type="email" id="signup-email" placeholder="Email" required>
+            <div class="password-field">
+                <input type="password" id="signup-password" placeholder="Create Password" required>
+                <span class="toggle-password" data-target="signup-password">👁️</span>
+            </div>
+            <div class="password-field">
+                <input type="password" id="signup-repassword" placeholder="Re-enter Password" required>
+                <span class="toggle-password" data-target="signup-repassword">👁️</span>
+            </div>
+            <button type="submit">Sign Up</button>
+            <p>Already have an account? <a href="#" id="to-signin">Sign In</a></p>
+        </form>
+        <!-- Sign In Form -->
+        <form id="signin-form" class="form hidden">
+            <h2>Sign In</h2>
+            <input type="text" id="signin-name" placeholder="Full Name" required>
+            <input type="text" id="signin-number" placeholder="Phone Number" required>
+            <div class="password-field">
+                <input type="password" id="signin-password" placeholder="Password" required>
+                <span class="toggle-password" data-target="signin-password">👁️</span>
+            </div>
+            <button type="submit">Sign In</button>
+            <p>Don't have an account? <a href="#" id="to-signup">Sign Up</a></p>
+        </form>
+        <!-- Success Page -->
+        <div id="success-page" class="hidden">
+            <h2>Welcome!</h2>
+            <p>You have been logged in successfully.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

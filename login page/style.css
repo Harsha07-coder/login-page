@@ -1,0 +1,234 @@
+#container input:hover ~ .custom-cursor,
+#container button:hover ~ .custom-cursor,
+#container a:hover ~ .custom-cursor,
+#container .toggle-password:hover ~ .custom-cursor {
+    display: none !important;
+}
+
+#container input,
+#container button,
+#container a,
+#container .toggle-password {
+    cursor: pointer;
+}
+#container input,
+#container button,
+#container a,
+#container .toggle-password {
+    cursor: pointer;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+
+body {
+    /* ...existing code... */
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.bg-shape {
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.45;
+    filter: blur(18px) saturate(1.2);
+    animation: floatShape 16s infinite alternate ease-in-out;
+}
+.bg-shape1 {
+    width: 320px; height: 320px;
+    top: 10%; left: 8%;
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    animation-delay: 0s;
+}
+.bg-shape2 {
+    width: 220px; height: 220px;
+    top: 60%; left: 65%;
+    background: linear-gradient(135deg, #667eea 60%, #764ba2 100%);
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+    animation-delay: 3s;
+}
+.bg-shape3 {
+    width: 180px; height: 180px;
+    top: 35%; left: 80%;
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+    animation-delay: 7s;
+}
+@keyframes floatShape {
+    0%   { transform: scale(1) translateY(0) translateX(0) rotate(0deg); }
+    40%  { transform: scale(1.08) translateY(-18px) translateX(22px) rotate(8deg); }
+    60%  { transform: scale(0.97) translateY(12px) translateX(-18px) rotate(-6deg); }
+    100% { transform: scale(1.1) translateY(-8px) translateX(12px) rotate(4deg); }
+}
+
+
+
+#container {
+    background: rgba(255,255,255,0.7);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 rgba(120, 120, 120, 0.08);
+    padding: 44px 32px;
+    width: 370px;
+    max-width: 92vw;
+    transition: box-shadow 0.3s;
+    z-index: 2;
+    position: relative;
+    backdrop-filter: blur(12px) saturate(1.2);
+    border: 1.5px solid rgba(255,255,255,0.25);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    animation: fadeIn 0.7s;
+}
+
+.form h2 {
+    margin: 0 0 10px 0;
+    color: #764ba2;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 12px;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+}
+
+input:focus {
+    border: 1.5px solid #764ba2;
+}
+
+button {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+}
+
+p {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 0;
+}
+
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #764ba2;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#success-page {
+    text-align: center;
+    animation: fadeIn 0.7s;
+}
+
+#success-page h2 {
+    color: #667eea;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+input.error {
+    border: 1.5px solid #e74c3c;
+    background: #fff0f0;
+}
+
+.form .error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: -10px;
+    margin-bottom: 5px;
+    min-height: 18px;
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.password-field input[type="password"] {
+    flex: 1;
+    padding-right: 38px;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    color: #764ba2;
+    user-select: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.toggle-password:hover {
+    opacity: 1;
+}
+
+/* Modern minimal custom cursor */
+.custom-cursor {
+    position: fixed;
+    top: 0; left: 0;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fff 60%, #667eea 100%);
+    box-shadow:
+        2px 4px 0 0 #2222  ,
+        4px 8px 0 0 #2221  ,
+        0 0 12px 2px #764ba244;
+    pointer-events: none;
+    z-index: 10000;
+    mix-blend-mode: lighten;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 0.12s cubic-bezier(.4,2,.6,1), background 0.2s, box-shadow 0.18s;
+    will-change: transform, box-shadow;
+}
+.custom-cursor.moving {
+    box-shadow:
+        2px 4px 0 0 #2225,
+        4px 8px 0 0 #2223,
+        0 0 18px 4px #764ba288,
+        0 0 0 2px #fff2;
+}
